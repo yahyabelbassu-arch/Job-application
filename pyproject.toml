@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "job-application-agent"
+version = "0.1.0"
+description = "Agent de base pour automatiser la détection et la préparation de candidatures"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+automation = ["playwright>=1.50"]
+ui = ["streamlit>=1.41"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+addopts = "-q"
